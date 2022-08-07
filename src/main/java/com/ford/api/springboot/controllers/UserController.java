@@ -22,5 +22,4 @@ public class UserController {
     public ResponseEntity<List<User>> list() {
         return ResponseEntity.ok(userService.listAll());
     }
-
 }
