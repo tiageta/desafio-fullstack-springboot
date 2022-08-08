@@ -1,0 +1,13 @@
+.viewport-center {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin: 2em;
+}
+
+.ford-logo {
+  width: 100%;
+  @media (min-width: 48em) {
+    width: 70%;
+  }
+}
