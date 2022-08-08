@@ -46,7 +46,7 @@ export class VehiclesDataService {
       if (vehiclesData.length !== 1) throw 'VIN does not match a record.';
 
       const id = vehiclesData[0].id;
-      return this.http.patch(`${API}/vehiclesData/${id}`, newValues, {
+      return this.http.put(`${API}/vehiclesData/${id}`, newValues, {
         observe: 'response',
       });
     } catch (err) {

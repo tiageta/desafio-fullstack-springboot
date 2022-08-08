@@ -72,6 +72,13 @@ export class DataTableComponent implements OnInit {
     .getVehiclesData()
     .pipe(
       repeat({ delay: () => this._httpGetNotifier$ }),
+      tap(() => {
+        // Triggers observable where all logic for flags is implemented
+        this.searchedVin.updateValueAndValidity({
+          onlySelf: true,
+          emitEvent: true,
+        });
+      }),
       map((allVehiclesData, index) => {
         // Only on first subscribe
         if (index === 0) {
@@ -196,11 +203,6 @@ export class DataTableComponent implements OnInit {
 
   private refreshVehiclesData(): void {
     this._httpGetNotifier$.next();
-    // Triggers observable where all logic for flags is implemented
-    this.searchedVin.updateValueAndValidity({
-      onlySelf: true,
-      emitEvent: true,
-    });
   }
 
   private vinMatchVehicleData(vin: string): boolean {
