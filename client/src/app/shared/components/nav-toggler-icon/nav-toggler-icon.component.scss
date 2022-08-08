@@ -1,0 +1,24 @@
+.nav-container {
+  position: relative;
+  padding: 0;
+
+  &,
+  .nav-icon {
+    background-color: transparent;
+    width: 36px;
+    height: 35px;
+  }
+
+  svg {
+    * {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+  }
+
+  rect {
+    width: 20px;
+    height: 3px;
+    fill: #666;
+  }
+}

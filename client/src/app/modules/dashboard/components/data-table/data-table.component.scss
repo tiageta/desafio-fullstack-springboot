@@ -1,0 +1,65 @@
+table {
+  width: 100%;
+  min-height: 5em;
+  max-width: 100%;
+  color: #212529;
+  border-color: #dee2e6;
+
+  .input-field {
+    max-width: 85% !important;
+    input {
+      &:disabled {
+        background-color: #ddd;
+      }
+    }
+    .crud-buttons {
+      button {
+        display: flex;
+        padding: 0.5em;
+      }
+    }
+  }
+
+  .data-field {
+    .unit {
+      position: relative;
+      z-index: -1;
+      font-size: 0.8em;
+      font-weight: 600;
+      color: #444;
+      padding-inline: 0.2em;
+    }
+  }
+
+  td,
+  tr {
+    border: none;
+  }
+
+  tbody,
+  thead {
+    td,
+    th {
+      border-inline: 1px solid #ccc;
+      align-self: stretch;
+      padding-inline: 1em;
+      display: grid;
+      align-items: center;
+      min-height: 3rem;
+      min-width: 8rem;
+      &:first-child {
+        flex-grow: 3.5 !important;
+      }
+    }
+  }
+
+  tfoot {
+    height: 0.5em;
+  }
+}
+
+.fa-sm {
+  font-size: 0.75em;
+  height: 0.75em;
+  width: 0.75em;
+}
