@@ -51,7 +51,6 @@ public class VehicleDataService {
             updatedVehicleData.setLatitude(vehicleData.getLatitude());
         if(vehicleData.getLongitude() != null)
             updatedVehicleData.setLongitude(vehicleData.getLongitude());
-        System.out.println(updatedVehicleData);
         vehicleDataRepository.save(updatedVehicleData);
     }
 }
