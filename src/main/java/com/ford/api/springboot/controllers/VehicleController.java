@@ -1,6 +1,7 @@
 package com.ford.api.springboot.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +20,8 @@ public class VehicleController {
     private final VehicleService vehicleService;
 
     @GetMapping
-    public ResponseEntity<List<Vehicle>> list() {
-        return ResponseEntity.ok(vehicleService.listAll());
+    public ResponseEntity<Map<String,List<Vehicle>>> list() {
+        return ResponseEntity.ok(Map.of("data",vehicleService.listAll()));
     }
 
 }

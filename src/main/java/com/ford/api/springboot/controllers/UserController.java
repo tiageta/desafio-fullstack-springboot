@@ -1,6 +1,7 @@
 package com.ford.api.springboot.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public ResponseEntity<List<User>> list() {
-        return ResponseEntity.ok(userService.listAll());
+    public ResponseEntity<Map<String,List<User>>> list() {
+        return ResponseEntity.ok(Map.of("data",userService.listAll()));
     }
 }

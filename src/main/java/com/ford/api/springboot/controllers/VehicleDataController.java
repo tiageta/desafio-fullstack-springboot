@@ -1,6 +1,7 @@
 package com.ford.api.springboot.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,11 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("vehiclesData")
 @RequiredArgsConstructor
 public class VehicleDataController {
-    private final VehicleDataService vehicleService;
+    private final VehicleDataService vehicleDataService;
 
     @GetMapping
-    public ResponseEntity<List<VehicleData>> list() {
-        return ResponseEntity.ok(vehicleService.listAll());
+    public ResponseEntity<Map<String,List<VehicleData>>> list() {
+        return ResponseEntity.ok(Map.of("data",vehicleDataService.listAll()));
     }
 
 }
