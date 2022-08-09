@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "private": true,
   "dependencies": {

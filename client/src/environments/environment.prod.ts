@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_URL: 'https://ford-desafio-tiagolima.herokuapp.com',
+  API_URL: 'https://ford-springboot-tiagolima.herokuapp.com',
 };

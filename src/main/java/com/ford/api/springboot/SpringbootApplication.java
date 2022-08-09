@@ -21,7 +21,7 @@ public class SpringbootApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 				.allowedMethods("*")
-				.allowedOrigins("http://localhost:8080", "http://localhost:4200");
+				.allowedOrigins("http://localhost:8080", "http://localhost:4200", "https://ford-springboot-tiagolima.herokuapp.com");
 			}
 		};
 	}
